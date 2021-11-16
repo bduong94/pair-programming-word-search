@@ -90,18 +90,16 @@ const transposeDiagonally = (matrix) => {
 //   // A
 //   // S W
 //   // Y E C
-  
+
+//
 const generateStringsDiagonally = (matrix) => {
     let arrayOfStrings = [];
     for (let i = 0; i < matrix.length; i++) {
-        //let thisString = '';
         let thisRow = []
         for (let j = 0; j < matrix[0].length; j++)  {
             if (j > i) break;
-            //thisString += matrix[i-j][j];
             thisRow.push(matrix[i-j][j]);
         }
-        //arrayOfStrings.push(thisString);
         arrayOfStrings.push(thisRow);
     } 
     return arrayOfStrings;
