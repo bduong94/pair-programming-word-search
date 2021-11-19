@@ -19,10 +19,6 @@ const printMatrix = (matrix) => {
     }
 };
 
-  //Loop for number rows
-  //Once number of rows reached
-  //Loop for number of columns -- i = row.length
-
   const coordinatesValid = function (matrix, i, j) {
     let noRows = matrix.length;
     let noCols = matrix[0].length;
@@ -54,49 +50,6 @@ const printMatrix = (matrix) => {
 
     return arrayOfStrings;
 }
-
-const makeArray = (rows, cols) => {
-    let array = [];
-    for (let i = 0; i < rows; i++){
-        array.push([]);
-        for (let j = 0; j < cols; j++){
-            array[i].push('*');
-        }
-    }
-    
-    return array;
-}
-  
-// const transposeDiagonally = (matrix) => {
-//     if (!matrix.length) return [];
-//     let rowsOfMatrix = matrix.length;
-//     let colsOfMatrix = matrix[0].length;
-//     let newMatrix = makeArray(rowsOfMatrix, colsOfMatrix);
-  
-//     for (let p = 0; p < rowsOfMatrix; p++) {
-//       for (let q = 0; q < colsOfMatrix; q++){
-//         newMatrix[p][q] = matrix[rowsOfMatrix - 1 - q][colsOfMatrix - 1 - p];
-//       }
-//     }
-  
-//     return newMatrix;
-//   }
-  
-//   printMatrix(makeArray(3,3));
-//   printMatrix(transposeDiagonally(letters));
-  // printMatrix(transposeDiagonally([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
-  
-//   //Generate List of stings:
-//   // A
-//   // S W
-//   // Y E C
-
-//
-console.log(generateStringsDiagonally([[1, 2, 3], [4, 5, 6], [7, 8, 9]]));
-
-//         [0][0]
-//         [1][0] [0][1]
-//         [2][0] [1][1] [0][2]
 
 const checkRowsForWord = (letters, word) => {
     const horizontalJoin = letters.map(ls => ls.join(''))
